@@ -1,23 +1,85 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap);
+
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
-header li{
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+body > header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+body > header li{
   display: inline;
+  margin-left: 10px;
+}
+body > header{
+  background-color: #bdbdbd;
+  color: white;
+}
+body > header a{
+  color: black;
+  transition: color 500ms linear;
+}
+body > header a:hover{
+  color: white;
+  text-decoration: underline;
 }
 .container{
   width: 1080px;
   margin: 0 auto;
+}
+section h2 {
+  font-size: 32px;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 .articles{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.articles article img{
-  height: 180px;
-}
 .articles article{
   width: 30%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.articles article img{
+  width: 100%;
+}
+.articles article h3{
+  font-size: 24px;
+  padding: 10px 0;
+}
+.articles article p{
+  margin-bottom: 10px;
+}
+.articles article a{
+  padding: 8px 10px;
+  background-color: #787878;
+  color: white;
+  font-weight: bold;
+}
+.articles article a:hover{
+  text-decoration: underline;
+}
+
+#sports {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+#sports article a{
+  background-color: rgb(14, 175, 14);
+}
+#economy{
+  background-color: rgba(217, 255, 0, 0.2);
+}
+#economy article a{
+  background-color: rgb(219, 192, 15);
 }
