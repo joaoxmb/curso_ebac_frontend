@@ -1,32 +1,33 @@
 const form = document.querySelector("form");
 const b = document.querySelector("#b");
 const a = document.querySelector("#a");
-const errorMsg = document.querySelector("#error-msg");
 const successMsg = document.querySelector("#success-msg");
-const button = document.querySelector("#verify");
-let visible = false;
+
+let msgIsVisible = false; // armazena o status de visibilidade para não executar o comando mais de uma vez sem necessidade.
+function msgVisible(boolean) {
+  if (boolean) {
+    if (!msgIsVisible) {
+      msgIsVisible = true;
+      successMsg.classList.remove("invisible");
+    }
+  } else if (msgIsVisible) {
+    msgIsVisible = false;
+    successMsg.classList.add("invisible");
+  }
+}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  successMsg.classList.remove("invisible");
+  
+  msgVisible(true);
   successMsg.innerHTML = `Está correto, o valor de B - ${b.value} é maior doque A - ${a.value}`;
 })
 
-b.addEventListener("keyup", (e) => {
-  if (parseInt(e.target.value) > parseInt(a.value)) {
-    if (!visible) {
-      b.classList.remove("error");
-      errorMsg.classList.add("invisible");
-      button.disabled = false;
-      visible = true;
-    }
-  } else if (visible) {
-    b.classList.add("error");
-    errorMsg.classList.remove("invisible");
-    successMsg.classList.add("invisible");
-    button.disabled = true;
-    visible = false;
-  }
+a.addEventListener("keyup", (e) => {
+    const valueA = parseFloat(e.target.value);
+    b.min = valueA + 1;
 
+    msgVisible(false);
 })
 
+b.addEventListener("keyup", () => msgVisible(false));

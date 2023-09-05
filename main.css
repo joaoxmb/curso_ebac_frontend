@@ -26,17 +26,15 @@ input, button{
   border: 1px solid black;
   border-radius: 3px;
 }
-input:focus, button:focus{
+input:focus{
   box-shadow: 0 0 0 1px blue;
+}
+input:invalid{
+  border: none;
+  box-shadow: 0 0 0 1px red;
 }
 button{
   cursor: pointer;
-}
-#error-msg{
-  background-color: red;
-  padding: 10px;
-  border-radius: 3px;
-  color: white;
 }
 #success-msg{
   background-color: rgb(21, 205, 36);
@@ -44,10 +42,6 @@ button{
   margin: 15px 0;
   border-radius: 3px;
   color: white;
-}
-.error{
-  border: none;
-  box-shadow: 0 0 0 2px red !important;
 }
 .invisible{
   display: none;
