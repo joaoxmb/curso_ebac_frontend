@@ -4,7 +4,6 @@ const a = document.querySelector("#a");
 const errorMsg = document.querySelector("#error-msg");
 const successMsg = document.querySelector("#success-msg");
 const button = document.querySelector("#verify");
-let checked = false;
 let visible = false;
 
 form.addEventListener("submit", (e) => {
@@ -14,10 +13,7 @@ form.addEventListener("submit", (e) => {
 })
 
 b.addEventListener("keyup", (e) => {
-  // const isError = b.classList.contains("error");
-  checked = parseInt(e.target.value) > parseInt(a.value);
-
-  if (checked) {
+  if (parseInt(e.target.value) > parseInt(a.value)) {
     if (!visible) {
       b.classList.remove("error");
       errorMsg.classList.add("invisible");
