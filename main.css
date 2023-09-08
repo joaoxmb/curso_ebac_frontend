@@ -1,48 +1,63 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-.container{
-  width: 100%;
-  max-width: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
 }
-form{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+form {
+    margin-top: 40px;
 }
-form > div{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+
+input, textarea, button {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 3px;
 }
-input, button{
-  padding: 8px 16px;
-  outline: none;
-  border: 1px solid black;
-  border-radius: 3px;
+
+button {
+    background-color: #2ecc71;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+    cursor: pointer;
 }
-input:focus{
-  box-shadow: 0 0 0 1px blue;
+
+button:hover {
+    background-color: #27ae60;
 }
-input:invalid{
-  border: none;
-  box-shadow: 0 0 0 1px red;
-}
-button{
-  cursor: pointer;
+#fullname-error{
+    background-color: red;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 3px;
+    color: white;
 }
 #success-msg{
-  background-color: rgb(21, 205, 36);
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 3px;
-  color: white;
+    background-color: #2ecc71;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 3px;
+    color: white;
+}
+.error{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 2px red;
 }
 .invisible{
-  display: none;
+    display: none;
 }
