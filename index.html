@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBAC - Register</title>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <section id="register">
+        <h1>Bem-Vindo a EBAC</h1>
+        <p>Faça seu registro agora e junte-se a mais de 300 milhões de alunos.</p>
+
+        <form>
+          <label for="fullname">
+            <input name="fullname" id="fullname" required placeholder="Seu Nome" invalid />
+            <span>Nome completo</span>
+          </label>
+          <label for="email">
+            <input type="email" name="email" id="email" required placeholder="email@provedor.com" />
+            <span>E-mail</span>
+          </label>
+          <label for="cpf">
+            <input name="cpf" id="cpf" required placeholder="000.000.000-00" />
+            <span>CPF</span>
+          </label>
+          <label type="tel" for="tel">
+            <input name="tel" id="tel" required placeholder="(00) 00000-0000" />
+            <span>Telefone</span>
+          </label>
+          <label for="cep">
+            <input name="cep" id="cep" required placeholder="0000-000" />
+            <span>CEP</span>
+          </label>
+          <div>
+            <label for="address">
+              <input name="address" id="address" required disabled placeholder="Preencha o CEP" />
+              <span>Endereço</span>
+            </label>
+            <label for="addressNumber">
+              <input name="addressNumber" id="addressNumber" required placeholder="200" />
+              <span>Número</span>
+            </label>
+          </div>
+
+          <button type="submit">
+            Registrar-se
+          </button>
+        </form>
+      </section>
+      <section id="about">
+      </section>
+    </div>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
