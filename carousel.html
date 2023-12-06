@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - Carousel</title>
+  <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div data-bs-interval="3000" class="carousel-item active">
+        <img class="w-100" src="//via.placeholder.com/1080x400" alt=""/>
+        <div class="carousel-caption">
+          <h4>Title</h4>
+        </div>
+      </div>
+      <div data-bs-interval="3000" class="carousel-item">
+        <img class="w-100" src="//via.placeholder.com/1080x400" alt=""/>
+        <div class="carousel-caption">
+          <h4>Title</h4>
+        </div>
+      </div>
+      <div data-bs-interval="3000" class="carousel-item">
+        <img class="w-100" src="//via.placeholder.com/1080x400" alt=""/>
+        <div class="carousel-caption">
+          <h4>Title</h4>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button type="button" class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <div class="carousel-indicators">
+      <button type="button" class="active" data-bs-target="#carousel" data-bs-slide-to="0"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+    </div>
+  </div>
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
