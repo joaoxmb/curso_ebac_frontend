@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal - Popup</title>
+  <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#modal-example-1">
+        Mostrar modal simple
+      </button>
+      <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#modal-example-2">
+        Mostrar modal static
+      </button>
+      <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#modal-example-3">
+        Mostrar modal buttons
+      </button>
+    </div>
+
+    <div id="modal-example-1" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Header do modal</h3>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sed labore explicabo, amet aliquam corrupti dolore delectus velit vero facere enim. Quas, nisi rerum! Porro molestiae non officiis quaerat repudiandae!</p>
+          </div>
+          <div class="modal-footer">
+            <h5>Footer do modal</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-example-2" class="modal" data-bs-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Header do modal</h3>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sed labore explicabo, amet aliquam corrupti dolore delectus velit vero facere enim. Quas, nisi rerum! Porro molestiae non officiis quaerat repudiandae!</p>
+          </div>
+          <div class="modal-footer">
+            <h5>Footer do modal</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-example-3" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Header do modal</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sed labore explicabo, amet aliquam corrupti dolore delectus velit vero facere enim. Quas, nisi rerum! Porro molestiae non officiis quaerat repudiandae!</p>
+        </div>
+        <div class="modal-footer">
+          <h5>Footer do modal</h5>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-js" class="modal" data-bs-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Header do modal</h3>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sed labore explicabo, amet aliquam corrupti dolore delectus velit vero facere enim. Quas, nisi rerum! Porro molestiae non officiis quaerat repudiandae!</p>
+        </div>
+        <div class="modal-footer">
+          <h5>Footer do modal</h5>
+          <time></time>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+    const counterEl = document.querySelector("#modal-js time");
+    let counter = 3;
+
+    counterEl.textContent = counter;
+    counter--
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = new bootstrap.Modal("#modal-js");
+
+      const count = setInterval(() => {
+        if (counter != 0) {
+          counterEl.textContent = counter
+          counter--
+          return;
+        }
+        modal.hide();
+        clearInterval(count);
+      }, 1000)
+
+      modal.show();
+    })
+  </script> -->
+
+  <script>
+    const counter = class {
+      loop = 0;
+      element = null;
+      callback = null;
+
+      constructor(elementSelector, loopQuanty, callback){
+        this.loop = (loopQuanty - 1);
+        this.element = document.querySelector(elementSelector);
+        this.callback = callback;
+      }
+      
+      start(){
+        this.element.textContent = this.loop + 1;
+
+        const count = setInterval(() => {
+          if (this.loop != 0){
+            this.element.textContent = this.loop
+            this.loop--
+            return;
+          }
+          clearInterval(count);
+          this.callback();
+        }, 1000)
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = new bootstrap.Modal("#modal-js");
+      const count = new counter("#modal-js time", 3, () => {
+        modal.hide();
+      })
+
+      modal.show();
+      count.start();
+    })
+  </script>
+</body>
+</html>
