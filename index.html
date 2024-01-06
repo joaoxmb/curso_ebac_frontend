@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-  <header class="sticky-top p-4">
+  <header class="position-fixed p-4 z-3 w-100" id="header">
     <div class="navbar navbar-expand-lg">
       <div class="container">
         <div class="navbar-brand">
@@ -21,7 +21,7 @@
         <nav id="nav" class="navbar-collapse collapse justify-content-end">
           <ul class="nav nav-pills d-block d-md-flex">
             <li class="nav-item">
-              <a href="#about" class="nav-link active">
+              <a href="#about" class="nav-link">
                 <i class="bi bi-house-door"></i>
                 Sobre o restaurante
               </a>
@@ -49,6 +49,63 @@
       </div>
     </div>
   </header>
+  <div data-bs-spy="scroll" data-bs-target="header">
+    <section id="about">
+      <div class="carousel slide" id="about-slide" data-bs-ride="carousel">
+        <button 
+          type="button"
+          class="carousel-control-prev"
+          data-bs-target="#about-slide"
+          data-bs-slide="prev"
+          >
+          <i class="carousel-control-prev-icon"></i>
+        </button>
+        <button 
+          type="button"
+          class="carousel-control-next"
+          data-bs-target="#about-slide"
+          data-bs-slide="next"
+          >
+          <i class="carousel-control-next-icon"></i>
+        </button>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/slides/slide1.png" alt="Slide 1"/>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/slides/slide2.png" alt="Slide 2"/>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/slides/slide3.png" alt="Slide 3"/>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-12 col-md-6 col-lg-5">
+            <img class="w-100" src="./images/restaurante.jpg" alt="Nosso restaurante"/>
+          </div>
+          <div class="col-12 col-md-6 col-lg-7 mt-4 mt-md-0">
+            <h2>Sobre o restaurante</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto expedita nam nemo laborum illum, est explicabo odio a? Ipsum dignissimos tempore saepe fuga velit accusamus culpa alias nobis laboriosam suscipit.</p>
+            <h3>Sobre o espaço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium blanditiis consequatur aliquam cum? Suscipit delectus id reprehenderit, quis facere obcaecati nam sunt reiciendis vitae blanditiis odit aperiam, veritatis cum placeat?</p>
+            <ul>
+              <li>
+                Item 1
+              </li>
+              <li>
+                Item 2
+              </li>
+              <li>
+                Item 3
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
