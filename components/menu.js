@@ -210,10 +210,11 @@ const menu = (products) => {
 
   menuDom.innerHTML = `
     <aside class="mb-2">
-      <nav class="nav nav-pills d-flex d-md-flex flex-md-column gap-1 mb-2 rounded-3">
+      <nav class="nav nav-pills d-md-block gap-1 mb-2 rounded-3">
         ${handlerNav}
       </nav>
     </aside>
+    <div class="vr d-none d-md-block"></div>
     <div class="tab-content">
       ${handlerContent}
     </div>
