@@ -15,6 +15,10 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
 }
 
+.section-title {
+  margin: 1.8em 0 1.3em 0;
+}
+
 .navbar {
   background-color: var(--primary-color);
   border-radius: 13px;
@@ -90,4 +94,57 @@ h1,h2,h3,h4,h5,h6 {
 #events h3 {
   font-size: 1.3em;
   color: var(--primary-color);
+}
+
+#menu nav {
+  width: 100%;
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+#menu nav::-webkit-scrollbar {
+	height: 4px;
+	background: transparent;
+}
+#menu nav::-webkit-scrollbar-track {
+	background: transparent;
+}
+#menu nav::-webkit-scrollbar-thumb {
+	background: #d0d0d0;
+	border-radius: 10px;
+}
+#menu nav::-webkit-scrollbar-thumb:hover {
+	background: #bebebe;
+}
+#menu nav button{
+  color: var(--primary-color);
+}
+#menu nav button:hover:not(.active){
+  color: #a53921;
+}
+#menu nav .active{
+  color: var(--secundary-color);
+  background-color: var(--primary-color);
+}
+#menu .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#menu .card {
+  border: none;
+}
+#menu button {
+  text-wrap: nowrap;
+}
+
+/* low and medium size */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  #menu .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* large size */
+@media only screen and (min-width: 992px) {
+  #menu .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
