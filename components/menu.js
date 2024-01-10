@@ -1,3 +1,4 @@
+// Development test
 const productsList = [
   {
     title: "Bebidas alcoólicas",
@@ -20,6 +21,11 @@ const productsList = [
           "Original",
           "Itaipava"
         ]
+      },
+      {
+        name: "Whisky",
+        img: "../images/cardapio/bebidas/whisky.webp",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
       },
       {
         name: "Whisky",
@@ -59,11 +65,25 @@ const productsList = [
           "Tônica"
         ]
       },
+      {
+        name: "Água",
+        img: "../images/cardapio/bebidas/agua.jpeg",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        options: [
+          "Com gás",
+          "Tônica"
+        ]
+      }
     ]
   },
   {
     title: "Entradas",
     itens: [
+      {
+        name: "Entrada",
+        img: "../images/cardapio/entradas/entrada.jpg",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+      },
       {
         name: "Entrada",
         img: "../images/cardapio/entradas/entrada.jpg",
@@ -92,6 +112,11 @@ const productsList = [
       {
         name: "Pizza",
         img: "../images/cardapio/pratos/pizza.jpg",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+      },
+      {
+        name: "Salmão",
+        img: "../images/cardapio/pratos/salmao.jpg",
         desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
       },
       {
@@ -133,13 +158,23 @@ const productsList = [
           "Morango",
           "Leite ninho"
         ]
+      },
+      {
+        name: "CupCake",
+        img: "../images/cardapio/sobremesas/cupcake.jpg",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        options: [
+          "Chocolate",
+          "Morango",
+          "Leite ninho"
+        ]
       }
     ]
   }
 ]
 
 const menu = (products) => {
-  // Develop test
+  // Development test
   products = productsList
 
   const menuDom = document.querySelector("#menu-products");
