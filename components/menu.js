@@ -139,6 +139,7 @@ const productsList = [
 ]
 
 const menu = (products) => {
+  // Develop test
   products = productsList
 
   const menuDom = document.querySelector("#menu-products");

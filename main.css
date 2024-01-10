@@ -170,9 +170,17 @@ footer .social-midia li:hover a{
   transition: all .3s;
 }
 
+#contact form input[data-has-value="true"]:valid, 
+#contact form textarea[data-has-value="true"]:valid{
+  border-color: #5ce141 !important;
+}
+#contact form input[data-has-value="true"]:invalid, 
+#contact form textarea[data-has-value="true"]:invalid{
+  border-color: #e14141 !important;
+}
+
 #contact form input:is(:hover, :focus), 
 #contact form textarea:is(:hover, :focus){
-  border-color: var(--secundary-color);
   opacity: 1;
 }
 
