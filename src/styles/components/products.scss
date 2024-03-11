@@ -1,0 +1,54 @@
+@use '../variables';
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+  
+  .product-item{
+    
+    img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .product-button {
+      display: block;
+      background-color: variables.$greenColor;
+      padding: 8px 0;
+      margin-top: 8px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: variables.$secundaryColor;
+      transition: background-color .3s;
+      
+      &:hover {
+        background-color: darken(variables.$greenColor, 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: variables.$tabletSize) {
+  .container {
+      max-width: 80%;
+  }
+
+  .products {
+      grid-template-columns: repeat(2, 48.5%);
+      column-gap: 3%;
+  }
+}
+
+@media screen and (max-width: variables.$mobileSize) {
+  .products {
+    display: block;
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+  }
+}

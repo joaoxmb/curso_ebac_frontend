@@ -1,0 +1,14 @@
+{
+  "name": "curso_ebac_frontend",
+  "version": "1.0.0",
+  "description": "Exercicio SASS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/style.scss build/sass/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}
