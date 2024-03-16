@@ -1,5 +1,2 @@
-### Curso Ebac FrontEnd
-
-Este repositorio conterá todo o meu progresso de aprendizado do curso de FrontEnd.
-
-Inicio em 2023.
+# Exercicio Gulp
+Neste exercício, foi utilizado o Gulp para fazer a compilação do SASS, bem como a compressão de imagens e minificação dos arquivos JavaScript.
