@@ -1,0 +1,105 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@300..700&display=swap');
+@import "./maps.less";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varta", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #color[textBlack];
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media #breakPoints[tablet] {
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px 0px 20px;
+
+  &::before {
+    content:  '';
+    background-image: url(../../public/images/background-gradient.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    z-index: -1;
+  }
+
+  &__photo {
+    width: 120px;
+    border-radius: 50%;
+    outline: 7px solid #color[backgroundColor];
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__name {
+    margin-top: 15px;
+  }
+  &__about {
+    text-align: center;
+    color: #color[textGrey];
+  }
+}
+
+.navbar {
+  margin: 50px 0;
+  padding: 0 50px;
+
+  &__item {
+    width: 100%;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  &__icon {
+    margin: 0px 10px 4px 0;
+    font-size: 1.2rem;
+    display: flex;
+  }
+  &__link {
+    color: #color[textBlack];
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    box-shadow: inset 0px 0px 0px 2px #color[buttonBackground];
+    transition: all .3s;
+    
+    &:hover {
+      background-color: #color[buttonBackground];
+      color: #color[textWhite];
+    }
+  }
+}
