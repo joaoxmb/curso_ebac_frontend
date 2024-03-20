@@ -1,0 +1,18 @@
+{
+  "name": "exercicio_less",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run watch",
+    "build": "npm run less & vite build",
+    "watch": "vite build --watch & npm run less",
+    "less": "less-watch-compiler ./src/styles/ ./dist/styles main.less",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3",
+    "vite": "^5.1.6"
+  }
+}

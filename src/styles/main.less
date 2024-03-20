@@ -1,0 +1,54 @@
+@import "./maps.less";
+@import "./components/products.less";
+@import "./components/menu.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: #colors[background];
+}
+
+section {
+    padding: 56px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #colors[secundary];
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+
+        @media @tablet {
+            & {
+                max-width: 80%;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
