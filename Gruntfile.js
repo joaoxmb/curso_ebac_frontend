@@ -1,6 +1,9 @@
 module.exports = (grunt) => {
   grunt.initConfig({
     pkg: grunt.file.readJSON('./package.json'),
+    concurrent: {
+      target: ['sass', 'less', 'teste', 'teste2']
+    },
     sass: {
       dist: {
         option: {
@@ -43,6 +46,7 @@ module.exports = (grunt) => {
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-concurrent');
 
-  grunt.registerTask('default', ['less', 'sass']);
+  grunt.registerTask('default', 'concurrent');
 }
