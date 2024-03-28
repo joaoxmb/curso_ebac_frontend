@@ -1,0 +1,15 @@
+{
+  "name": "curso_ebac_frontend",
+  "version": "1.0.0",
+  "description": "Este repositorio conterá todo o meu progresso de aprendizado do curso de FrontEnd.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-less": "^3.0.0"
+  }
+}
